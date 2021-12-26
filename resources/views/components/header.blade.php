@@ -32,10 +32,10 @@
                 @guest
                     {{-- 非ログイン --}}
                     <li class="nav-item">
-                        <a class="btn btn-secondary ml-3" href="{{ route('register') }}" role="button">会員登録</a>
+                        <a class="btn btn-secondary ml-3" href="{{ route('register') }}" role="button" style="color:white">会員登録</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-outline-info ml-2" href="{{ route('login') }}" role="button">ログイン</a>
+                        <a class="btn btn-outline-info ml-2" href="{{ route('login') }}" role="button" style="color:#6cb2eb">ログイン</a>
                     </li>
                 @else
                     {{-- ログイン済み --}}
@@ -52,21 +52,28 @@
 
                         {{-- ドロップダウンメニュー --}}
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                            @if($user->id === 1)
                             <a class="dropdown-item" href="{{ route('sell') }}">
                                 <i class="fas fa-camera text-left" style="width: 30px"></i>商品を出品する
                             </a>
+                            @endif
 
+                            @if($user->id === 1)
                             <a class="dropdown-item" href="{{ route('mypage.sold-items') }}">
                                 <i class="fas fa-store-alt text-left" style="width: 30px"></i>出品した商品
                             </a>
+                            @endif
 
                             <a class="dropdown-item" href="{{ route('mypage.edit-profile') }}">
                                 <i class="far fa-address-card text-left" style="width: 30px"></i>プロフィール編集
                             </a>
 
-                            <a class="dropdown-item" href="{{ route('mypage.edit-profile') }}">
+                            @if($user->id !== 1)
+                            <a class="dropdown-item" href="{{ route('cart.index') }}">
                                 <i class="fas fa-shopping-cart text-left" style="width: 30px"></i>カートを見る
                             </a>
+                            @endif
 
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 <i class="fas fa-sign-out-alt text-left" style="width: 30px"></i>ログアウト

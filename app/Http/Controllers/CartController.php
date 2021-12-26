@@ -15,12 +15,12 @@ class CartController extends Controller
         $cart = Cart::find($cart_id);
 
         $total_price = 0;
-        //foreach ($cart->products as $product) {
-        //$total_price += $product->price * $product->pivot->quantity;
-        //}
+        foreach ($cart->products as $product) {
+            $total_price += $product->price * $product->pivot->quantity;
+        }
 
         return view('cart.index')
-            //->with('line_items', $cart->products)
+            ->with('line_items', $cart->products)
             ->with('total_price', $total_price);
     }
     public function checkout()

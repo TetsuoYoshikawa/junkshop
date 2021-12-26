@@ -43,6 +43,11 @@
         {{ $items->withQueryString()->links() }}
     </div>
 </div>
+@guest
+
+@else
+
+@if($user->administrator === 1)
 
 <a href="{{route('sell')}}"
    class="bg-secondary text-white d-inline-block d-flex justify-content-center align-items-center flex-column"
@@ -54,4 +59,9 @@
         <i class="fas fa-camera" style="font-size: 30px;"></i>
     </div>
 </a>
+
+@endif
+
+@endguest
+
 @endsection

@@ -1,6 +1,6 @@
 .top {
     &-img {
-        background-image: url("../../public/images/top.jpg");
+        background-image: url("../../public/images/junkshop-top.jpeg");
         background-size: cover;
         height: 400px;
         display: flex;
@@ -124,7 +124,7 @@ a:active {
 @media (max-width: 600px) {
     .top {
         &-img {
-            background-image: url("../../public/images/top2.jpg");
+            background-image: url("../../public/images/junkshop-top.jpeg");
             height: 300px;
         }
     }

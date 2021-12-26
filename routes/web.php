@@ -18,16 +18,6 @@ Auth::routes();
 Route::get('/', 'ItemsController@showItems')->name('top');
 Route::get('/items/{item}', 'ItemsController@showItemDetail')->name('item');
 
-Route::name('product.')
-    ->group(function () {
-        Route::get('/a', 'ProductController@index')->name('index');
-        Route::get('/product/{id}', 'ProductController@show')->name('show');
-        //Route::get('/', 'ItemsController@showItems')->name('top');
-    });
-
-Route::get('sells', 'ProductController@showSellForm')->name('product.sell');
-Route::post('sells', 'ProductController@sellItem')->name('sells');
-
 Route::name('line_item.')
     ->group(function () {
         Route::post('/line_item/create', 'LineItemController@create')->name('create');
@@ -43,8 +33,6 @@ Route::name('cart.')
 
 Route::middleware('auth')
     ->group(function () {
-        Route::get('items/{item}/buy', 'ItemsController@showBuyItemForm')->name('item.buy');
-        Route::post('items/{item}/buy', 'ItemsController@buyItem')->name('item.buy');
         Route::get('sell', 'SellController@showSellForm')->name('sell');
         Route::post('sell', 'SellController@sellItem')->name('sell');
     });

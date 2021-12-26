@@ -26,7 +26,7 @@ class LineItemController extends Controller
             ]);
         }
 
-        return redirect(route('product.index'));
+        return redirect(route('cart.index'));
     }
     public function delete(Request $request)
     {

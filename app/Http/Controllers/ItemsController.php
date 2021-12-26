@@ -15,6 +15,7 @@ class ItemsController extends Controller
     public function showItems(Request $request)
     {
         $query = Item::query();
+        $user = Auth::user();
 
         // カテゴリで絞り込み
         if ($request->filled('category')) {
@@ -41,7 +42,8 @@ class ItemsController extends Controller
             ->paginate(52);
 
         return view('items.items')
-            ->with('items', $items);
+            ->with('items', $items)
+            ->with('user', $user);
     }
     private function escape(string $value)
     {
@@ -53,18 +55,18 @@ class ItemsController extends Controller
     }
     public function showItemDetail(Item $item)
     {
+
         return view('items.item_detail')
             ->with('item', $item);
     }
 
-    public function showBuyItemForm(Item $item)
+    public function showBuyItemForm(Item $item, User $user)
     {
-        if (!$item->isStateSelling) {
-            abort(404);
-        }
+        $user = Auth::user();
 
         return view('items.item_buy_form')
-            ->with('item', $item);
+            ->with('item', $item)
+            ->with('user', $user);
     }
     public function buyItem(Request $request, Item $item)
     {
