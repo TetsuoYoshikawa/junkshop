@@ -19,10 +19,12 @@ class CreateItemsTable extends Migration
             $table->unsignedBigInteger('buyer_id')->nullable();
             $table->unsignedBigInteger('secondary_category_id');
             $table->unsignedBigInteger('item_condition_id');
+            $table->unsignedBigInteger('item_size_id');
 
             $table->string('name');
             $table->string('image_file_name');
             $table->text('description');
+            $table->string('brand');
             $table->unsignedInteger('price');
             $table->string('state');
             $table->timestamp('bought_at')->nullable();
@@ -33,6 +35,7 @@ class CreateItemsTable extends Migration
             $table->foreign('buyer_id')->references('id')->on('users');
             $table->foreign('secondary_category_id')->references('id')->on('secondary_categories');
             $table->foreign('item_condition_id')->references('id')->on('item_conditions');
+            $table->foreign('item_size_id')->references('id')->on('item_sizes');
         });
     }
 
