@@ -18,6 +18,14 @@
                 </td>
             </tr>
             <tr>
+                <th>ブランド</th>
+                <td>{{$item->brand}}</td>
+            </tr>
+            <tr>
+                <th>サイズ</th>
+                <td>{{$item->size->name}}</td>
+            </tr>
+            <tr>
                 <th>カテゴリー</th>
                 <td>{{$item->secondaryCategory->primaryCategory->name}} / {{$item->secondaryCategory->name}}</td>
             </tr>

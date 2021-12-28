@@ -20,6 +20,8 @@ class ItemSeeder extends Seeder
             'name' => 'Black T-shirt',
             'image_file_name' => '1.jpg',
             'description' => 'コットン素材を使用したクルーネックのカットソー。',
+            'item_size_id' => 3,
+            'brand' => 'orignal',
             'price' => '4500',
             'state' => 'selling',
         ]);
@@ -31,6 +33,8 @@ class ItemSeeder extends Seeder
             'name' => 'White T-shirt',
             'image_file_name' => '2.jpg',
             'description' => 'コットン素材を使用したクルーネックのカットソー。',
+            'item_size_id' => 3,
+            'brand' => 'orignal',
             'price' => '4500',
             'state' => 'selling',
         ]);
@@ -42,6 +46,8 @@ class ItemSeeder extends Seeder
             'name' => 'White T-shirt 2',
             'image_file_name' => '3.jpg',
             'description' => 'コットン素材を使用したクルーネックのカットソー。',
+            'item_size_id' => 3,
+            'brand' => 'orignal',
             'price' => '6800',
             'state' => 'selling',
         ]);
@@ -53,6 +59,8 @@ class ItemSeeder extends Seeder
             'name' => 'White T-shirt Plain',
             'image_file_name' => '4.jpg',
             'description' => 'コットン素材を使用したクルーネックのカットソー。シンプルなデザインで、様々なスタイリングに合わせやすいアイテム。',
+            'item_size_id' => 3,
+            'brand' => 'orignal',
             'price' => '6800',
             'state' => 'selling',
         ]);
@@ -64,6 +72,8 @@ class ItemSeeder extends Seeder
             'name' => 'Black T-shirt 2',
             'image_file_name' => '5.jpg',
             'description' => 'コットン素材を使用したクルーネックのカットソー。',
+            'item_size_id' => 3,
+            'brand' => 'orignal',
             'price' => '4500',
             'state' => 'selling',
         ]);
@@ -75,6 +85,8 @@ class ItemSeeder extends Seeder
             'name' => 'Navy T-shirt',
             'image_file_name' => '6.jpg',
             'description' => 'コットン素材を使用したクルーネックのカットソー。',
+            'item_size_id' => 3,
+            'brand' => 'orignal',
             'price' => '4500',
             'state' => 'selling',
         ]);
@@ -86,6 +98,8 @@ class ItemSeeder extends Seeder
             'name' => 'Border T-shirt',
             'image_file_name' => '7.jpg',
             'description' => 'コットン素材を使用したクルーネックのカットソー。',
+            'item_size_id' => 3,
+            'brand' => 'orignal',
             'price' => '6800',
             'state' => 'selling',
         ]);
@@ -97,6 +111,8 @@ class ItemSeeder extends Seeder
             'name' => 'Border Long Sleeve T-shirt',
             'image_file_name' => '8.jpg',
             'description' => 'コットン素材を使用したクルーネックのカットソー。',
+            'item_size_id' => 3,
+            'brand' => 'orignal',
             'price' => '7800',
             'state' => 'selling',
         ]);
@@ -108,6 +124,8 @@ class ItemSeeder extends Seeder
             'name' => 'Gray T-shirt',
             'image_file_name' => '9.jpg',
             'description' => 'コットン素材を使用したクルーネックのカットソー。',
+            'item_size_id' => 3,
+            'brand' => 'orignal',
             'price' => '4800',
             'state' => 'selling',
         ]);
