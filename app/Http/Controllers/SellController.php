@@ -8,6 +8,7 @@ use Illuminate\Http\UploadedFile;
 use App\Http\Requests\SellRequest;
 use App\Item;
 use App\ItemCondition;
+use App\ItemSize;
 use App\PrimaryCategory;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
@@ -26,9 +27,11 @@ class SellController extends Controller
             ->orderBy('sort_no')
             ->get();
         $conditions = ItemCondition::orderBy('sort_no')->get();
+        $sizes = ItemSize::orderBy('sort_no')->get();
 
         return view('sell')
             ->with('categories', $categories)
+            ->with('size', $sizes)
             ->with('conditions', $conditions);
     }
     public function sellItem(SellRequest $request)
@@ -41,9 +44,11 @@ class SellController extends Controller
         $item->image_file_name       = $imageName;
         $item->seller_id             = $user->id;
         $item->name                  = $request->input('name');
+        $item->brand                 = $request->input('brand');
         $item->description           = $request->input('description');
         $item->secondary_category_id = $request->input('category');
         $item->item_condition_id     = $request->input('condition');
+        $item->item_size_id          = $request->input('size');
         $item->price                 = $request->input('price');
         $item->state                 = Item::STATE_SELLING;
         $item->save();

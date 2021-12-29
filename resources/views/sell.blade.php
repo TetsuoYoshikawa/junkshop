@@ -49,6 +49,17 @@
                         @enderror
                     </div>
 
+                    {{-- ブランド --}}
+                    <div class="form-group mt-3">
+                        <label for="brand">ブランド</label>
+                        <input id="brand" type="text" class="form-control @error('brand') is-invalid @enderror" name="brand" value="{{ old('brand') }}" required autocomplete="brand" autofocus>
+                        @error('brand')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+
                     {{-- 商品の説明 --}}
                     <div class="form-group mt-3">
                         <label for="description">商品の説明</label>
@@ -88,6 +99,23 @@
                             @foreach ($conditions as $condition)
                             <option value="{{$condition->id}}" {{old('condition') == $condition->id ? 'selected' : ''}}>
                                 {{$condition->name}}
+                            </option>
+                        @endforeach
+                        </select>
+                        @error('condition')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+
+                    {{-- 商品の状態 --}}
+                    <div class="form-group mt-3">
+                        <label for="condition">サイズ</label>
+                        <select name="size" class="custom-select form-control @error('condition') is-invalid @enderror">
+                            @foreach ($size as $size)
+                            <option value="{{$size->id}}" {{old('size') == $size->id ? 'selected' : ''}}>
+                                {{$size->name}}
                             </option>
                         @endforeach
                         </select>

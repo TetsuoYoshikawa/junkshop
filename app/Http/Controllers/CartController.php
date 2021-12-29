@@ -9,7 +9,7 @@ use App\LineItem;
 
 class CartController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $cart_id = Session::get('cart');
         $cart = Cart::find($cart_id);
