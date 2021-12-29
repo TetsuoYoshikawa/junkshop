@@ -10962,6 +10962,23 @@ a.text-dark:focus {
   }
 }
 
+.box {
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+}
+
+.jumbotron {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-animation: bgAnime 25s infinite;
+          animation: bgAnime 25s infinite;
+}
+
 .top-img {
   background-image: url(/images/junkshop-top.jpeg?92caa2f4ed1cb4a450757950399499e1);
   background-size: cover;
@@ -10969,12 +10986,70 @@ a.text-dark:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  position: absolute;
 }
 
 .top-img-text {
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
   letter-spacing: 3px;
+}
+
+.top-img2 {
+  background-image: url(/images/junkshop-top2.jpeg?66636b59bdce531ead823a3fc773b1ad);
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+.top-img3 {
+  background-image: url(/images/junkshop-top3.jpeg?e09c482192baa9c274ed6a5c0f772165);
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+}
+
+.top-img4 {
+  background-image: url(/images/junkshop-top4.jpeg?fca0f6c01747529c400d8be34af03504);
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-animation-delay: 15s;
+          animation-delay: 15s;
+}
+
+.top-img5 {
+  background-image: url(/images/junkshop-top5.jpeg?7ad6c1dcdee51d635af7d2cb607f1642);
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-animation-delay: 20s;
+          animation-delay: 20s;
+}
+
+.top-img6 {
+  background-image: url(/images/junkshop-top6.jpeg?99aae131d5b3915ed62f18190ce40e6c);
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-animation-delay: 25s;
+          animation-delay: 25s;
 }
 
 .top__title {
@@ -10982,6 +11057,50 @@ a.text-dark:focus {
   color: #4a4a4a;
   letter-spacing: 2px;
   padding: 20px 0 40px;
+}
+
+@-webkit-keyframes bgAnime {
+  0% {
+    opacity: 0;
+  }
+
+  2% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  27% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes bgAnime {
+  0% {
+    opacity: 0;
+  }
+
+  2% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  27% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .card-product-name {

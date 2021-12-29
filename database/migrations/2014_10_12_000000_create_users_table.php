@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('avatar_file_name')->nullable();
-            $table->string('content')->unique();
+            $table->string('content')->nullable();
             $table->unsignedInteger('sales')->default(0);
             $table->boolean('administrator')->nullable();
             $table->rememberToken();

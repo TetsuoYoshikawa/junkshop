@@ -12,7 +12,6 @@
 
             <form method="POST" action="{{ route('register') }}" class="p-5">
                 @csrf
-
                 <div class="form-group">
                     <label for="name">ニックネーム</label>
                     <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="JUNKSHOP">

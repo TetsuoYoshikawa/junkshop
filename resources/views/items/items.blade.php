@@ -6,8 +6,25 @@
 
 @section('content')
 
+<div class="box">
 <div class="jumbotron top-img">
     <p class="text-center text-white top-img-text">{{ config('app.name', 'Laravel')}}</p>
+</div>
+<div class="jumbotron top-img2">
+    <p class="text-center text-white top-img-text">{{ config('app.name', 'Laravel')}}</p>
+</div>
+<div class="jumbotron top-img3">
+    <p class="text-center text-white top-img-text">{{ config('app.name', 'Laravel')}}</p>
+</div>
+<div class="jumbotron top-img4">
+    <p class="text-center text-white top-img-text">{{ config('app.name', 'Laravel')}}</p>
+</div>
+<div class="jumbotron top-img5">
+    <p class="text-center text-white top-img-text">{{ config('app.name', 'Laravel')}}</p>
+</div>
+<div class="jumbotron top-img6">
+    <p class="text-center text-white top-img-text">{{ config('app.name', 'Laravel')}}</p>
+</div>
 </div>
 <div class="container">
     <div class="top__title text-center">

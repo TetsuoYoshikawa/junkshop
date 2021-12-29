@@ -29,8 +29,7 @@
                         @csrf
                         <div class="card__btn-trash col-1">
                             <input type="hidden" name="id" value="{{ $item->pivot->id }}"/>
-                            <button type="submit" class="fas fa-trash-alt">
-                            </button>
+                            <button type="submit" class="fas fa-trash-alt"></button>
                         </div>
                     </form>
                 </div>
