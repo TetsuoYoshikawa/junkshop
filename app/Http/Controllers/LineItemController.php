@@ -12,7 +12,7 @@ class LineItemController extends Controller
     {
         $cart_id = Session::get('cart');
         $line_item = LineItem::where('cart_id', $cart_id)
-            ->where('product_id', $request->input('id'))
+            ->where('item_id', $request->input('id'))
             ->first();
 
         if ($line_item) {
@@ -21,7 +21,7 @@ class LineItemController extends Controller
         } else {
             LineItem::create([
                 'cart_id' => $cart_id,
-                'product_id' => $request->input('id'),
+                'item_id' => $request->input('id'),
                 'quantity' => $request->input('quantity'),
             ]);
         }
