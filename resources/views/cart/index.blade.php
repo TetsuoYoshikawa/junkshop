@@ -14,7 +14,7 @@
         @foreach ($line_items as $item)
         <div class="card mb-3">
             <div class="row">
-                <img src="{{ asset($item->image) }}" alt="{{ $item->name }}" class="product-cart-img"/>
+                <img src="/storage/item-images/{{$item->image_file_name}}" alt="{{ $item->image_file_name }}" class="product-cart-img"/>
                 <div class="card-body">
                     <div class="card-product-name col-6">
                         {{ $item->name }}
@@ -25,11 +25,11 @@
                     <div class="card__total-price col-3 text-center">
                         ￥{{ number_format($item->price * $item->pivot->quantity) }}
                     </div>
-                    <form method="post" action="{{ route('line_item.delete') }}">
+                    <form method="POST" action="{{ route('line_item.delete') }}">
                         @csrf
                         <div class="card__btn-trash col-1">
                             <input type="hidden" name="id" value="{{ $item->pivot->id }}"/>
-                            <button type="submit" class="fas fa-trash-alt"></button>
+                            <button type="submit"></button>
                         </div>
                     </form>
                 </div>

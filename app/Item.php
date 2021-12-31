@@ -49,4 +49,12 @@ class Item extends Model
     {
         return $this->belongsTo(ItemSize::class, 'item_size_id');
     }
+
+    public function carts()
+    {
+        return $this->belongsToMany(
+            Cart::class,
+            'line_items',
+        )->withPivot(['id', 'quantity']);
+    }
 }

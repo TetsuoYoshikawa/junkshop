@@ -33,6 +33,7 @@
                                 <i class="far fa-clock ml-3"></i>
                                 <span>{{$item->created_at->format('Y年n月j日 H:i')}}</span>
                             </div>
+                            <button>削除</button>
                         </div>
                         <a href="{{ route('item', [$item->id]) }}" class="stretched-link"></a>
                     </div>

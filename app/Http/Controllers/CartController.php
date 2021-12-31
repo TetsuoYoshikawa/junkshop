@@ -15,12 +15,12 @@ class CartController extends Controller
         $cart = Cart::find($cart_id);
 
         $total_price = 0;
-        foreach ($cart->products as $product) {
-            $total_price += $product->price * $product->pivot->quantity;
+        foreach ($cart->items as $item) {
+            $total_price += $item->price * $item->pivot->quantity;
         }
 
         return view('cart.index')
-            ->with('line_items', $cart->products)
+            ->with('line_items', $cart->items)
             ->with('total_price', $total_price);
     }
     public function checkout()
@@ -28,18 +28,18 @@ class CartController extends Controller
         $cart_id = Session::get('cart');
         $cart = Cart::find($cart_id);
 
-        if (count($cart->products) <= 0) {
+        if (count($cart->items) <= 0) {
             return redirect(route('cart.index'));
         }
 
         $line_items = [];
-        foreach ($cart->products as $product) {
+        foreach ($cart->items as $item) {
             $line_item = [
-                'name'        => $product->name,
-                'description' => $product->description,
-                'amount'      => $product->price,
+                'name'        => $item->name,
+                'description' => $item->description,
+                'amount'      => $item->price,
                 'currency'    => 'jpy',
-                'quantity'    => $product->pivot->quantity,
+                'quantity'    => $item->pivot->quantity,
             ];
             array_push($line_items, $line_item);
         }
