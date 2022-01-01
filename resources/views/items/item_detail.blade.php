@@ -7,7 +7,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-8 offset-2 bg-white">
+        <div class="bg-white">
             <div class="row mt-3">
                 <div class="col-8 offset-2">
                     @if (session('message'))
