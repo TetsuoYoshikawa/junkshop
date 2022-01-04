@@ -6,11 +6,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use App\Cart;
 use App\LineItem;
+use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
     public function index(Request $request)
     {
+        $user = Auth::user();
         $cart_id = Session::get('cart');
         $cart = Cart::find($cart_id);
 
@@ -21,7 +23,8 @@ class CartController extends Controller
 
         return view('cart.index')
             ->with('line_items', $cart->items)
-            ->with('total_price', $total_price);
+            ->with('total_price', $total_price)
+            ->with('user', $user);
     }
     public function checkout()
     {
