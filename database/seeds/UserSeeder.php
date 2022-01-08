@@ -21,5 +21,11 @@ class UserSeeder extends Seeder
             'administrator' => true,
             'content' => 'ヨーロッパやアメリカ、ドメスティックと国内外を問わずメンズ・レディース共に幅広くセレクトしています。NEW・USEDウエアー/アクセサリー/服飾・生活雑貨/インテリアなどなど数多く取り揃えております。気軽にお問い合わせください。'
         ]);
+        factory(User::class)->create([
+            'name' => 'テストユーザー',
+            'email' => 'test@test.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('testtest'),
+        ]);
     }
 }
