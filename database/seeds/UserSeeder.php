@@ -33,5 +33,11 @@ class UserSeeder extends Seeder
             'email_verified_at' => now(),
             'password' => Hash::make('testtest'),
         ]);
+        factory(User::class)->create([
+            'name' => '吉川',
+            'email' => 'yoshikawa@yoshikawa.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('testtest'),
+        ]);
     }
 }
