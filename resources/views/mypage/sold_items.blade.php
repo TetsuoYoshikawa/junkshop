@@ -33,9 +33,13 @@
                                 <i class="far fa-clock ml-3"></i>
                                 <span>{{$item->created_at->format('Y年n月j日 H:i')}}</span>
                             </div>
-                            <button>削除</button>
+                            <form method="post" action="{{ route('sold-items.delete') }}">
+                            @csrf
+                                <input type="hidden" name="id" value="{{ $item->id }}"/>
+                                <button type="submit" class="btn-primary"><a class="fas fa-trash-alt"></a></button>
+                            </form>
                         </div>
-                        <a href="{{ route('item', [$item->id]) }}" class="stretched-link"></a>
+
                     </div>
                 @endforeach
             </div>
