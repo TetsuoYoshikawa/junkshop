@@ -18,6 +18,7 @@ Auth::routes();
 Route::get('/', 'ItemsController@showItems')->name('top');
 Route::get('/items/{item}', 'ItemsController@showItemDetail')->name('item');
 
+
 Route::name('line_item.')
     ->group(function () {
         Route::post('/line_item/create', 'LineItemController@create')->name('create');

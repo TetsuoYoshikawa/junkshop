@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('avatar_file_name')->nullable();
             $table->string('content')->nullable();
+            $table->string('url')->nullable();
             $table->unsignedInteger('sales')->default(0);
             $table->boolean('administrator')->nullable();
             $table->rememberToken();

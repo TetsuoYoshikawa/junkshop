@@ -60,6 +60,17 @@
                         @enderror
                     </div>
 
+                    {{-- カラー --}}
+                    <div class="form-group mt-3">
+                        <label for="color">カラー</label>
+                        <input id="color" type="text" class="form-control @error('price') is-invalid @enderror" name="color" value="{{ old('color') }}" required autocomplete="color" autofocus>
+                        @error('color')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+
                     {{-- 商品の説明 --}}
                     <div class="form-group mt-3">
                         <label for="description">商品の説明</label>

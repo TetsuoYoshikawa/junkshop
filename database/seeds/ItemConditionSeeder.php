@@ -14,7 +14,7 @@ class ItemConditionSeeder extends Seeder
     {
         factory(ItemCondition::class)->create([
             'id'      => 1,
-            'name'    => '新品、未使用',
+            'name'    => '新品',
             'sort_no' => 1,
         ]);
         factory(ItemCondition::class)->create([

@@ -200,6 +200,10 @@ a:active {
     text-decoration: none;
 }
 
+.title {
+    width: 50px;
+}
+
 @media (max-width: 600px) {
     .top {
         &-img {

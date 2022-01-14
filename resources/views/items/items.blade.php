@@ -49,8 +49,9 @@
                     <div class="card-body">
                         <small class="text-muted">{{$item->secondaryCategory->primaryCategory->name}} / {{$item->secondaryCategory->name}}</small>
                         <h5 class="card-title">{{$item->name}}</h5>
-                        <p>SIZE:{{$item->size->name}}</p>
-                        <p>BRAND:{{$item->brand}}</p>
+                        <p style="margin-bottom: 3px">SIZE:{{$item->size->name}}</p>
+                        <p style="margin-bottom: 3px">BRAND:{{$item->brand}}</p>
+                        <p style="margin-bottom: 3px">COLOR:{{$item->color}}</p>
                     </div>
                     <a href="{{ route('item', [$item->id]) }}" class="stretched-link"></a>
                 </div>

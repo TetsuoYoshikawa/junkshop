@@ -24,13 +24,8 @@ class PrimaryCategorySeeder extends Seeder
         ]);
         factory(PrimaryCategory::class)->create([
             'id'      => 3,
-            'name'    => 'ベビー・キッズ',
-            'sort_no' => 3,
-        ]);
-        factory(PrimaryCategory::class)->create([
-            'id'      => 4,
             'name'    => 'その他',
-            'sort_no' => 4,
+            'sort_no' => 3,
         ]);
     }
 }

@@ -54,6 +54,7 @@ class CartController extends Controller
             'line_items'           => [$line_items],
             'success_url'     => route('cart.success'),
             'cancel_url'           => route('cart.index'),
+            'billing_address_collection' => 'required',
         ]);
 
         return view('cart.checkout', [
@@ -66,6 +67,6 @@ class CartController extends Controller
         $cart_id = Session::get('cart');
         LineItem::where('cart_id', $cart_id)->delete();
 
-        return redirect(route('product.index'));
+        return redirect(route('top'));
     }
 }

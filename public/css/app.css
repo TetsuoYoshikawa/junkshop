@@ -11217,6 +11217,10 @@ a:active {
   text-decoration: none;
 }
 
+.title {
+  width: 50px;
+}
+
 @media (max-width: 600px) {
   .top-img {
     background-image: url(/images/junkshop-top.jpeg?92caa2f4ed1cb4a450757950399499e1);

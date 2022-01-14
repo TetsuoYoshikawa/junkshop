@@ -32,12 +32,12 @@
                                 <span class="ml-1">{{number_format($item->price)}}</span>
                                 <i class="far fa-clock ml-3"></i>
                                 <span>{{$item->created_at->format('Y年n月j日 H:i')}}</span>
+                                <form method="post" action="{{ route('sold-items.delete') }}">
+                                    @csrf
+                                        <input type="hidden" name="id" value="{{ $item->id }}"/>
+                                        <button type="hidden"><a class="fas fa-trash-alt"></a></button>
+                                </form>
                             </div>
-                            <form method="post" action="{{ route('sold-items.delete') }}">
-                            @csrf
-                                <input type="hidden" name="id" value="{{ $item->id }}"/>
-                                <button type="submit" class="btn-primary"><a class="fas fa-trash-alt"></a></button>
-                            </form>
                         </div>
 
                     </div>

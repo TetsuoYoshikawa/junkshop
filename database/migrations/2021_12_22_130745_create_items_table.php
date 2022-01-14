@@ -25,6 +25,7 @@ class CreateItemsTable extends Migration
             $table->string('image_file_name');
             $table->text('description');
             $table->string('brand');
+            $table->string('color');
             $table->unsignedInteger('price');
             $table->string('state');
             $table->timestamp('bought_at')->nullable();

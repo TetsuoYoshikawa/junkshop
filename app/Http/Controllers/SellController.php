@@ -50,6 +50,7 @@ class SellController extends Controller
         $item->item_condition_id     = $request->input('condition');
         $item->item_size_id          = $request->input('size');
         $item->price                 = $request->input('price');
+        $item->color                 = $request->input('color');
         $item->state                 = Item::STATE_SELLING;
         $item->save();
 

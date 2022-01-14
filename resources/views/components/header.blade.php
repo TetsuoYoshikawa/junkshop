@@ -37,6 +37,9 @@
                     <li class="nav-item">
                         <a class="btn btn-outline-info ml-2" href="{{ route('login') }}" role="button" style="color:#6cb2eb">ログイン</a>
                     </li>
+                    <li class="nav-item" >
+                        <a class="fab fa-instagram fa-2x btn-outline-info ml-3" style="color: #eb756c ; margin-top:5px" href="{{ url("https://www.instagram.com/junk_shop_insta") }}"></a>
+                    </li>
                 @else
                     {{-- ログイン済み --}}
                     <li class="nav-item dropdown ml-2">
@@ -83,6 +86,9 @@
                             @csrf
                             </form>
                         </div>
+                        <li class="nav-item" >
+                            <a class="fab fa-instagram fa-2x btn-outline-info ml-3" style="color: #eb756c ; margin-top:10px" href="{{ url("https://www.instagram.com/junk_shop_insta") }}"></a>
+                        </li>
                     </li>
                 @endguest
             </ul>
