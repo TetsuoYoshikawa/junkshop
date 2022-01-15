@@ -58,7 +58,7 @@
 
                             @if($user->id === 1)
                             <a class="dropdown-item" href="{{ route('sell') }}">
-                                <i class="fas fa-camera text-left" style="width: 30px"></i>商品を出品する
+                                <i class="fas fa-camera text-left" style="width: 30px"></i>商品を出品するす
                             </a>
                             @endif
 
