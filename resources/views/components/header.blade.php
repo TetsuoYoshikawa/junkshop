@@ -58,7 +58,7 @@
 
                             @if($user->id === 1)
                             <a class="dropdown-item" href="{{ route('sell') }}">
-                                <i class="fas fa-camera text-left" style="width: 30px"></i>商品を出品するす
+                                <i class="fas fa-camera text-left" style="width: 30px"></i>商品を出品する
                             </a>
                             @endif
 
@@ -69,7 +69,7 @@
                             @endif
 
                             <a class="dropdown-item" href="{{ route('mypage.edit-profile') }}">
-                                <i class="far fa-address-card text-left" style="width: 30px"></i>プロフィール編集
+                                <i class="fas fa-address-card text-left" style="width: 30px"></i>プロフィール編集
                             </a>
 
                             @if($user->id !== 1)
