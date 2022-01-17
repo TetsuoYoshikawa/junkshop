@@ -14,6 +14,7 @@ class UserSeeder extends Seeder
     public function run()
     {
         factory(User::class)->create([
+            'id' => 1,
             'name' => 'JUNKSHOP',
             'email' => 'admin@admin.com',
             'email_verified_at' => now(),
@@ -24,20 +25,9 @@ class UserSeeder extends Seeder
             'url' => 'http://junkshop.chronicle.co.jp/'
         ]);
         factory(User::class)->create([
+            'id' => 2,
             'name' => 'テストユーザー',
             'email' => 'test@test.com',
-            'email_verified_at' => now(),
-            'password' => Hash::make('testtest'),
-        ]);
-        factory(User::class)->create([
-            'name' => '哲生',
-            'email' => 'tetsuo@tetsuo.com',
-            'email_verified_at' => now(),
-            'password' => Hash::make('testtest'),
-        ]);
-        factory(User::class)->create([
-            'name' => '吉川',
-            'email' => 'yoshikawa@yoshikawa.com',
             'email_verified_at' => now(),
             'password' => Hash::make('testtest'),
         ]);

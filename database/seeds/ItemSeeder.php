@@ -322,5 +322,24 @@ class ItemSeeder extends Seeder
             'price' => '12980',
             'state' => 'selling',
         ]);
+        factory(Item::class)->create([
+            'id'      => 20,
+            'seller_id'    => 1,
+            'secondary_category_id' => 3,
+            'item_condition_id' => 1,
+            'name' => 'Aran Long Skirt',
+            'image_file_name' => '20.jpeg',
+            'description' => 'アラン編みローゲージの厚みのあるニットスカートです。
+            パーカーやスウェットとなどと合わせてカジュアルに着ていただいても、セットアップのようにニット上下にして上品に着ていただいても可愛いです。
+            ロング丈ですがバックスリットがあり、動きやすさにも配慮されています。
+
+            【OLDDERBY KNITWEAR】
+            ニット製品の本場と言われる英国で１００年以上の歴史を持つ老舗ニットファクトリーが手掛けるブランド。数多くの有名ブランドの生産を請け負うなど、熟練した職人が手掛けるハンドフレーム製法による丁寧なもの作りに対する姿勢は、英国内だけでなく世界中で高い評価を獲得しています。',
+            'item_size_id' => 3,
+            'brand' => 'Oldderby Knitwear',
+            'color' => 'BLACK',
+            'price' => '16280',
+            'state' => 'selling',
+        ]);
     }
 }
