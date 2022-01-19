@@ -167,7 +167,7 @@ class ItemSeeder extends Seeder
             'name' => 'BASIC DOWN MUFFLER',
             'image_file_name' => 'PHR5PzhpZFqAelmv1NyhWVb0eXSoVhLm0pPlrcCn.jpg',
             'description' => '超軽量型のダウンマフラー。
-            高密度400Ｔ以上のタフタに超撥水高密度加工を施したナイロンを使用し、デザインのみならず機能性にも優れております。',
+            高密度400以上のタフタに超撥水高密度加工を施したナイロンを使用し、デザインのみならず機能性にも優れております。',
             'item_size_id' => 3,
             'brand' => 'TAION',
             'color' => 'OLIVE',
