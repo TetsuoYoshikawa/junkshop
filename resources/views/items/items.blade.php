@@ -8,22 +8,22 @@
 
 <div class="box">
 <div class="jumbotron top-img">
-    <p class="text-center text-white top-img-text">{{ config('app.name', 'Laravel')}}</p>
+    <p class="text-center text-white top-img-text">JUNK SHOP</p>
 </div>
 <div class="jumbotron top-img2">
-    <p class="text-center text-white top-img-text">{{ config('app.name', 'Laravel')}}</p>
+    <p class="text-center text-white top-img-text">JUNK SHOP</p>
 </div>
 <div class="jumbotron top-img3">
-    <p class="text-center text-white top-img-text">{{ config('app.name', 'Laravel')}}</p>
+    <p class="text-center text-white top-img-text">JUNK SHOP</p>
 </div>
 <div class="jumbotron top-img4">
-    <p class="text-center text-white top-img-text">{{ config('app.name', 'Laravel')}}</p>
+    <p class="text-center text-white top-img-text">JUNK SHOP</p>
 </div>
 <div class="jumbotron top-img5">
-    <p class="text-center text-white top-img-text">{{ config('app.name', 'Laravel')}}</p>
+    <p class="text-center text-white top-img-text">JUNK SHOP</p>
 </div>
 <div class="jumbotron top-img6">
-    <p class="text-center text-white top-img-text">{{ config('app.name', 'Laravel')}}</p>
+    <p class="text-center text-white top-img-text">JUNK SHOP</p>
 </div>
 </div>
 <div class="container">
@@ -35,7 +35,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="card">
                     <div class="position-relative overflow-hidden">
-                        <img class="card-img" src="/storage/item-images/{{$item->image_file_name}}">
+                        <img class="card-img" src="https://tetsuoyoshikawa.s3.ap-northeast-3.amazonaws.com/item-image/{{$item->image_file_name}}">
                         <div class="position-absolute py-2 px-3" style="left: 0; bottom: 20px; color: white; background-color: rgba(0, 0, 0, 0.70)">
                             <i class="fas fa-yen-sign"></i>
                             <span class="ml-1">{{number_format($item->price)}}</span>
