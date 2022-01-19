@@ -7,7 +7,7 @@
         stripe.redirectToCheckout({
             sessionId: '{{ $session->id }}'
         }).then(function (result) {
-            window.location.href = 'http://gentle-escarpment-08964.herokuapp.com/cart';
+            window.location.href = 'http://junk-app.herokuapp.com/cart';
         });
     }
 </script>
