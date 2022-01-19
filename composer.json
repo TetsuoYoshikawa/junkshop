@@ -9,16 +9,18 @@
     "license": "MIT",
     "require": {
         "php": "^7.2.5",
+        "ext-gd": "*",
+        "aws/aws-sdk-php": "^3.209",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
-        "fzaninotto/faker":"^1.9",
+        "fzaninotto/faker": "^1.9",
         "guzzlehttp/guzzle": "^6.3",
         "intervention/image": "2.5.1",
         "laravel/framework": "^7.24",
         "laravel/tinker": "^2.0",
         "laravel/ui": "2.1.0",
-        "stripe/stripe-php": "^7.107",
-        "ext-gd": "*"
+        "league/flysystem-aws-s3-v3": "^1.0",
+        "stripe/stripe-php": "^7.107"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "3.4.2",
