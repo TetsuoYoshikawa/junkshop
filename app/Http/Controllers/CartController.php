@@ -54,7 +54,7 @@ class CartController extends Controller
             'line_items'           => [$line_items],
             'success_url'     => route('cart.success'),
             'cancel_url'           => route('cart.index'),
-            'billing_address_collection' => 'required',
+            //'billing_address_collection' => 'required',
         ]);
 
         return view('cart.checkout', [
