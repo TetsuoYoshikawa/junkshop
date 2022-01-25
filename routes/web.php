@@ -18,6 +18,11 @@ Auth::routes();
 Route::get('/', 'ItemsController@showItems')->name('top');
 Route::get('/items/{item}', 'ItemsController@showItemDetail')->name('item');
 
+Route::middleware('auth')
+    ->group(function () {
+        Route::get('/sell', 'SellController@showSellForm')->name('sell');
+        Route::post('/sell', 'SellController@sellItem')->name('sell');
+    });
 
 Route::name('line_item.')
     ->group(function () {
@@ -33,18 +38,12 @@ Route::middleware('auth')
         Route::get('/cart/success', 'CartController@success')->name('success');
     });
 
-Route::middleware('auth')
-    ->group(function () {
-        Route::get('sell', 'SellController@showSellForm')->name('sell');
-        Route::post('sell', 'SellController@sellItem')->name('sell');
-    });
-
 Route::prefix('mypage')
     ->namespace('MyPage')
     ->middleware('auth')
     ->group(function () {
-        Route::get('edit-profile', 'ProfileController@showProfileEditForm')->name('mypage.edit-profile');
-        Route::post('edit-profile', 'ProfileController@editProfile')->name('mypage.edit-profile');
-        Route::get('sold-items', 'SoldItemsController@showSoldItems')->name('mypage.sold-items');
+        Route::get('/edit-profile', 'ProfileController@showProfileEditForm')->name('mypage.edit-profile');
+        Route::post('/edit-profile', 'ProfileController@editProfile')->name('mypage.edit-profile');
+        Route::get('/sold-items', 'SoldItemsController@showSoldItems')->name('mypage.sold-items');
         Route::post('/sold-items/delete', 'SoldItemsController@delete')->name('sold-items.delete');
     });
