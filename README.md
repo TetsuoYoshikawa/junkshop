@@ -1,10 +1,10 @@
-# Rese API
+# JUNKSHOP API
 
 アパレル会社の通信販売サイトです。
 
-## UI Document
+## Document
 
-UI ドキュメントは[こちら](https://docs.google.com/spreadsheets/d/e/2PACX-1vToNsS76Ip9cJUIpurxJMG45T5JdKF5yiJlbfPmmlMT6w3C71_bTejc-uugeN2fjSqjcQH802YBSEE1/pubhtml)
+ドキュメントは[こちら](https://docs.google.com/spreadsheets/d/e/2PACX-1vToNsS76Ip9cJUIpurxJMG45T5JdKF5yiJlbfPmmlMT6w3C71_bTejc-uugeN2fjSqjcQH802YBSEE1/pubhtml)
 
 ## Prerequisites
 
